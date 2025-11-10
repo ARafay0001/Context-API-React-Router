@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
-import { ThemeProvider } from "./ThemeProvider.jsx"; // import the provider correctly
 import "./index.css";
+import TodoProvider from "./contexts/TodoProvider.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <ThemeProvider>
+    <TodoProvider>
       <App />
-    </ThemeProvider>
+    </TodoProvider>
   </React.StrictMode>
 );
