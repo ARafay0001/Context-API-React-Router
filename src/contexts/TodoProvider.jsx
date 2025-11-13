@@ -2,7 +2,9 @@ import { TodoContext } from "./TodoContext";
 import { useState } from "react";
 
 function TodoProvider({ children }) {
-  const [todos, setTodos] = useState([]);// created the use state to update the state of the dadta 
+  const [todos, setTodos] = useState([
+    { id: Date.now(), text: "To Understand the useContext", completed: false }
+  ]);// created the use state to update the state of the dadta 
 
   const addTodo = (text) => {
     const newTodo = { id: Date.now(), text, completed: false };

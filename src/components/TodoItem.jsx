@@ -6,7 +6,7 @@ const TodoItem = ({ todo }) => {
   const { deleteTodo, toggleTodo } = useContext(TodoContext);
 
   return (
-    <li className="flex items-center justify-between bg-green-100 p-3 rounded-xl my-2">
+    <li className="flex items-center min-w-85 justify-between bg-green-100 p-3 rounded-xl my-2">
       {/* 2. Todo text with strikethrough if completed */}
       <span
         onClick={() => toggleTodo(todo.id)} // toggle completed when clicked
@@ -18,7 +18,7 @@ const TodoItem = ({ todo }) => {
       {/* 3. Delete button */}
       <button
         onClick={() => deleteTodo(todo.id)}
-        className="bg-red-500 text-white px-3 py-1 rounded-lg hover:bg-red-600 active:bg-red-700 transition-all"
+        className="bg-red-500  ml-4 text-white px-3 py-1 rounded-lg hover:bg-red-600 active:bg-red-700 transition-all"
       >
         Delete
       </button>
